@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --color-ivory: #faf8f4;
+  --color-warm: #fffdf9;
+  --color-ink: #292821;
+  --color-ink-soft: #5e5b50;
+  --color-plum: #78566f;
+  --color-plum-deep: #5f4158;
+  --color-plum-tint: #f1e8ee;
+  --color-sage: #879780;
+  --color-sage-deep: #5a6b54;
+  --color-sage-tint: #e9eee5;
+  --color-champagne: #efe6d6;
+  --color-blush: #f5e4e1;
+  --color-line: #e7e1d6;
+  --color-rose: #a64b4b;
+  --color-rose-tint: #f7e3e1;
+}
+
+@layer base {
+  html,
+  body {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+  ::selection {
+    background: var(--color-plum);
+    color: white;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-plum);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  * {
+    scrollbar-width: none;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.4s ease both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+}

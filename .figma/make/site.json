@@ -1,0 +1,10 @@
+{
+  "description": "Plan and manage memorable events effortlessly with AI-driven personalization, budget tracking, and vendor management for weddings, birthdays, and more.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
